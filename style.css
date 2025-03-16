@@ -1,1 +1,35 @@
-.
+body{
+	margin: 0;
+}
+.main {
+    position: fixed;
+    height: 80%;
+    width:-webkit-fill-available;
+    margin: 15px;
+    display: block;
+}
+.screen{
+	opacity: 20%;
+	position: absolute;
+	height: 100%;
+}
+.screen button{
+	right: 0;
+	position: absolute;
+}
+.screen img{
+	height: 100%;
+	width: 100%;
+}
+.screen:fullscreen{
+	padding-left: 25%;
+}
+.holding{
+	display: inline-block;
+	height: 100%;
+	width: 660px;
+}
+.lor{
+	display: inline-block;
+	position: fixed;
+}
