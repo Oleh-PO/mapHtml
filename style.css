@@ -29,3 +29,24 @@ body{
 	margin-left: 20px;
 	width: 30%;
 }
+.marker{
+	position: absolute;
+	height: 5%;
+	width: 4%;
+}
+.marker img{
+	transition: 0.1s;
+	border: solid transparent 5px;
+}
+.marker img:hover{
+	padding-top: 5px;
+}
+.marker h4{
+	text-align: center;
+	width: 400%;
+	position: absolute;
+	top: 120%;
+	left: -100%;
+	font-size: 15px;
+	margin: 0;
+}
