@@ -1,16 +1,22 @@
 body{
 	margin: 0;
 }
+img{
+	user-select: none;
+}
 .main {
-    position: fixed;
-    height: 80%;
-    width:-webkit-fill-available;
-    margin: 15px;
-    display: block;
+  position: fixed;
+  height: 80%;
+  width:-webkit-fill-available;
+  margin: 15px;
+  display: block;
 }
 .main:fullscreen{
 	border: solid 10px wheat;
 	background-color: wheat;
+}
+.main:fullscreen .lor{
+	width: 40%;
 }
 .screen{
 	position: absolute;
@@ -24,10 +30,11 @@ body{
 	width: 100%;
 }
 .lor{
+	text-align: center;
 	display: inline-block;
 	position: fixed;
 	margin-left: 20px;
-	width: 30%;
+/*	width: 50%;*/
 }
 .marker{
 	position: absolute;
@@ -49,4 +56,12 @@ body{
 	left: -100%;
 	font-size: 15px;
 	margin: 0;
+}
+.imgs{
+	text-align: center;
+}
+.imgs div{
+	display: inline-block;
+	width: 45%;
+	margin: 5px;
 }

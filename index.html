@@ -4,27 +4,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>mapLOOKtest</title>
-	<link href="style.css" rel="stylesheet">
-	<script type="text/javascript" src="json.js"></script>
-	<script type="text/javascript" src="mapEngin.js"></script>
+	<link href="style/style.css" rel="stylesheet">
+	<script type="text/javascript" src="json/json.js"></script>
+	<script type="text/javascript" src="js/mapEngin.js"></script>
 </head>
 <body>
 	<div class="main">
 		<div class="screen">
 			<div id="holder">
-				<div id="exampl" class="marker" style="display:none;">
+				<div id="exampl" class="marker" style="display:none;"> <!--marker example, change it and all ather will change-->
 					<h4>TESTdsasasa</h4>
-					<img src="marker.png">
+					<img src="content/marker.png">
 				</div>
 			</div>
-			<button class="toggle" id="fullScreen">BTN</button>
-			<img src="staticmap.png">
-		<div class="lor">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			<button class="toggle" id="fullScreen">BTN</button> <!--fullscreen button-->
+			<img src="content/staticmap.png">
+			<div class="lor"> <!--information block-->
+				<h3 id="name">Lorem ipsum</h3>
+				<p id="context">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<div class="imgs">
+					<div><img src="content/Untitled.png"></div>
+					<div><img src="content/Untitled.png"></div>
+					<div><img src="content/Untitled.png"></div>
+					<div><img src="content/Untitled.png"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
