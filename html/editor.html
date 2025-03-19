@@ -1,0 +1,27 @@
+<div>
+	<link href="style/editor.css" rel="stylesheet">
+	<script type="text/javascript" src="js/editorEngin.js"></script>
+	<div class="editorMenu">
+		<h2>map</h2>
+		<h2>markers</h2>
+	</div>
+	<div class="configMap">
+		<span>location X</span>
+		<input type="number" name="location">
+		<span>location Y</span>
+		<input type="number" name="location">
+		<span>maptype</span>
+		<input list="types" type="text" name="maptype">
+		<span>size</span>
+		<input type="range" name="size">
+		<span>zoom</span>
+		<input type="range" name="zoom">
+		<button id="send">send</button>
+		<datalist id="types">
+		  <option value="roadmap"></option>
+		  <option value="satellite"></option>
+		  <option value="hybrid"></option>
+		  <option value="terrain"></option>
+		</datalist>
+	</div>
+</div>

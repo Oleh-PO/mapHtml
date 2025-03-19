@@ -4,10 +4,15 @@ body{
 img{
 	user-select: none;
 }
+p{
+	margin-right: 10px;
+  margin-left: 10px;
+}
 .main {
+	font-family: "Roboto Flex", sans-serif;
   position: fixed;
   height: 80%;
-  width:-webkit-fill-available;
+  width: -webkit-fill-available;
   margin: 15px;
   display: block;
 }
@@ -17,6 +22,9 @@ img{
 }
 .main:fullscreen .lor{
 	width: 40%;
+}
+.main:fullscreen .lor .imgs div{
+	width: 45%;
 }
 .screen{
 	position: absolute;
@@ -34,7 +42,7 @@ img{
 	display: inline-block;
 	position: fixed;
 	margin-left: 20px;
-/*	width: 50%;*/
+	width: -webkit-fill-available;
 }
 .marker{
 	position: absolute;
@@ -62,6 +70,6 @@ img{
 }
 .imgs div{
 	display: inline-block;
-	width: 45%;
+/*	width: 45%;*/
 	margin: 5px;
 }
