@@ -1,7 +1,7 @@
 const json = 
 [
 {
-	"name": "testqwertyuikjhgfdfvbnj",
+	"name": "testq wertyuik jhgfdfvbnj",
 	"x":20,
 	"y": 5,
 	"type": "standart",
@@ -9,7 +9,7 @@ const json =
 	"imgs":["Untitled.png"],
 },
 {
-	"name": "test",
+	"name": "test dsfdsfd",
 	"x":80,
 	"y": 5,
 	"type": "standart",
@@ -17,7 +17,7 @@ const json =
 	"imgs":["Untitled.png", "Untitled.png"],
 },
 {
-	"name": "test",
+	"name": "testdfsfdfsfdsffsdfd",
 	"x":5,
 	"y": 80,
 	"type": "standart",

@@ -5,8 +5,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const context = document.getElementById('context');
   const imgs = document.querySelector('.imgs');
   const lor = document.querySelector('.lor');
+  const editor = document.querySelector('.editor');
   const preload = document.getElementById('preload');
-  const map = document.getElementById('map');
+
+
+  const editMod = function() { //detecting is we on a server, if true opens edito menu
+    if (location.protocol === "file:") {
+      return;
+    };
+    editor.style.display = "block";
+  };
 
   const preloader = function() { //preload function to prevent stuttering
     for (let i = 0; i < json.length; i++) {
@@ -15,17 +23,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
       };
     };
   };
+
   const markerDrop = function() { //create markers over map
+    document.title = json[0].name;
     let clone;
     for (let i = json.length - 1; i >= 0; i--) {
       clone = exampl.cloneNode(true); //clone from examle
       clone.style.left = json[i].x + "%";
       clone.style.top = json[i].y + "%";
+      clone.firstElementChild.innerText = json[i].name;
       clone.style.display = "block";
       clone.id = i;
       screen.appendChild(clone);
     };
   };
+
   document.querySelector(".toggle").addEventListener("click", function (event) { //fullscreen toggle 
     if (document.fullscreenElement) {
       document.exitFullscreen();
@@ -33,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
     document.querySelector(".main").requestFullscreen();
   });
+
   screen.addEventListener("click", function (event) { //show info from selected marker
-    console.log(mapLink);
     name.innerText = json[event.target.offsetParent.id].name;
     context.innerText = json[event.target.offsetParent.id].context;
     imgs.innerHTML = "";
@@ -43,7 +55,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
     lor.style.display = "inline-block";
   });
+
+
+
   //run all functions
+  editMod();
   preloader();
   markerDrop();
 });

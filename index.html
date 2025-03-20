@@ -3,18 +3,48 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>mapLOOKtest</title>
+	<title></title>
 	<link href="style/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+	<link href="style/editor.css" rel="stylesheet">
+	<script type="text/javascript" src="js/editorEngin.js"></script>
 	<script type="text/javascript" src="json/json.js"></script>
 	<script type="text/javascript" src="js/mapEngin.js"></script>
 </head>
 <body>
 	<div id="preload" style="display:none;"></div> <!--empty div for preloading photos-->
+	<div style="display:none;" class="editor">
+		<div class="editorMenu">
+			<h2>map</h2>
+			<h2>markers</h2>
+		</div>
+		<div class="configMap">
+			<span>location Y</span>
+			<input type="number" name="location">
+			<span>location X</span>
+			<input type="number" name="location">
+			<span>maptype</span>
+			<input list="types" type="text" name="maptype">
+			<span>size</span>
+			<input min="200" max="1000" step="100" type="range" name="size">
+			<span>zoom</span>
+			<input max="15" type="range" name="zoom">
+			<button id="send">send</button>
+			<button id="save">save</button>
+			<datalist id="types">
+			  <option value="roadmap"></option>
+			  <option value="satellite"></option>
+			  <option value="hybrid"></option>
+			  <option value="terrain"></option>
+			</datalist>
+
+		</div>
+	</div>
 	<div class="main">
 		<div class="screen">
 			<div id="holder">
-				<div id="example" class="marker" style="display:none;"> <!--marker example, change it and all ather will change-->
+				<!--marker example, change it and all ather will change-->
+				<div id="example" class="marker" style="display:none;">
 					<h4></h4>
 					<img src="content/marker.png">
 				</div>
