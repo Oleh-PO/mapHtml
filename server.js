@@ -26,7 +26,7 @@ app.post('/getMap', (req, res) => {
   res.writeHead(200);
   res.end();
   mapData = req.body;
-  // fs.writeFileSync("json/input.json", JSON.stringify(mapData));
+  fs.writeFileSync("json/input.json", JSON.stringify(mapData));
   fetch(mapData.src).then((response) => {
       const reader = response.body.getReader();
       return new ReadableStream({
@@ -52,7 +52,12 @@ app.post('/getMap', (req, res) => {
     .then((Buf) => Buffer.from(Buf, 'base64')) //make boffer for fs
     .then((decode) => fs.writeFile("content/staticmap.png", decode, function (err) {}))
 });
-
+app.post('/getMarker', (req, res) => { //geting marker json
+  res.writeHead(200);
+  res.end();
+  let json = "const json = "+JSON.stringify(req.body)
+  fs.writeFileSync("json/json.js", json);
+});
 app.use(express.static(path.join(__dirname)));
 
 

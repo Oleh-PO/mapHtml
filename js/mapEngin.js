@@ -1,6 +1,7 @@
+let screen;
 document.addEventListener("DOMContentLoaded", function(event) { 
-  const exampl = document.getElementById('example');
-  const screen = document.getElementById('holder');
+  const example = document.getElementById('example');
+  screen = document.getElementById('holder');
   const name = document.getElementById('name');
   const context = document.getElementById('context');
   const imgs = document.querySelector('.imgs');
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (location.protocol === "file:") {
       return;
     };
-    editor.style.display = "block";
+    editor.style.display = "block"; //paste this sn console if you want to enter edit mode
   };
 
   const preloader = function() { //preload function to prevent stuttering
@@ -27,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const markerDrop = function() { //create markers over map
     document.title = json[0].name;
     let clone;
-    for (let i = json.length - 1; i >= 0; i--) {
-      clone = exampl.cloneNode(true); //clone from examle
+    for (let i = 0; i < json.length; i++) {
+      clone = example.cloneNode(true); //clone from examle
       clone.style.left = json[i].x + "%";
       clone.style.top = json[i].y + "%";
       clone.firstElementChild.innerText = json[i].name;
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
   //run all functions
+
   editMod();
   preloader();
   markerDrop();

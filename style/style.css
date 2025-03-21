@@ -8,7 +8,10 @@ p{
 	margin-right: 10px;
   margin-left: 10px;
 }
-.main {
+.none{
+	display: none;
+}
+.main{
 	font-family: "Roboto Flex", sans-serif;
   position: fixed;
   height: 80%;

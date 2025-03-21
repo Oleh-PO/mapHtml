@@ -1,7 +1,11 @@
-.editorMenu h2{
-	display: inline-block;
+.editorMenu{
+	margin: 15px;
+	margin-bottom: 0;
+}
+.editorMenu button{
+	font-size: 25px;
 	width: 10%;
-	text-align: center;
+	line-height: 40px;
 }
 .configMap{
 	z-index: 10;
@@ -10,7 +14,12 @@
 	top: 10%;
 }
 .configMap input{
-	width: 50%;
+	width: 80%;
+	margin: 10px;
+	display: block;
+}
+.configMap select{
+	width: 80%;
 	margin: 10px;
 	display: block;
 }
